@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+nav {
+  background-color: #232f3e;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container input,
+button {
+  padding: 5px 10px;
+  border: none;
+}
+
+.search-container button {
+  background-color: gold;
+  color: #232f3e;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 3px 0 0 3px;
+}
+
+.search-container button:hover {
+  background-color: rgb(69, 212, 69);
+  color: #232f3e;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 3px 0 0 3px;
+}
+
+.search-container input {
+  font-size: 1rem;
+  border-radius: 3px 0 0 3px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-block: 38px; /*iska matlab top or bottom padding dena seprate*/
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-transform: uppercase;
+  min-height: 85vh;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 0px 10px #ccc;
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.movie-poster img {
+  height: 450px;
+  margin-right: 30px;
+  border-radius: 5px 0 0 5px;
+}
+
+.movie-info {
+  padding-inline: 15px;
+}
+
+.movie-info h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px 0 12px 0;
+}
+
+.movie-info h2 + p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.movie-info .movie-genre {
+  display: flex;
+  justify-content: center;
+  margin-block: 5px;
+}
+
+.movie-info .movie-genre p {
+  background: #232f3e;
+  color: #fff;
+  padding: 5px 14px;
+  margin-inline: 5px; /*iska matlab right or left shortcut margin dena*/
+  border: 2px solid black;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.movie-info p {
+  font-size: 18px;
+  margin-block: 16px;
+  line-height: 24px;
+}
+
+.movie-container .nobackground {
+  background: none;
+  box-shadow: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #232f3e;
+  color: #fff;
+  padding-block: 20px; /*iska matlab top or bottom padding dena seprate*/
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+/* responsiive*/
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .movie-container {
+    flex-direction: column;
+  }
+
+  .movie-poster img {
+    width: 100%;
+    height: fit-content;
+  }
+}
